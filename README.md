@@ -5,7 +5,7 @@
 ![Python](https://img.shields.io/badge/Python-3.8%2B-yellow?style=for-the-badge)
 
 <div align="center">
-  <img src="https://images.unsplash.com/photo-1555949963-aa79dcee154f?w=800&q=80" alt="Machine Learning Data Science" width="100%" style="border-radius: 10px; margin: 20px 0;">
+  <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80" alt="Machine Learning Data Science" width="100%" style="border-radius: 10px; margin: 20px 0;">
   <p><i>Protecting financial transactions with Machine Learning | Protegendo transações financeiras com Machine Learning</i></p>
 </div>
 
