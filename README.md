@@ -1,117 +1,133 @@
-# 🛡️ Detecção de Fraude em Cartões de Crédito
+# 🛡️ Credit Card Fraud Detection | Detecção de Fraude em Cartões de Crédito
 
 ![Fraud Detection](https://img.shields.io/badge/Machine%20Learning-Credit%20Card%20Fraud%20Detection-blue?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-yellow?style=for-the-badge)
 
 <div align="center">
-  <img src="https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80" alt="Fraud Detection" width="100%" style="border-radius: 10px; margin: 20px 0;">
-  <p><i>Protegendo transações financeiras com Machine Learning</i></p>
+  <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&q=80" alt="Fraud Detection" width="100%" style="border-radius: 10px; margin: 20px 0;">
+  <p><i>Protecting financial transactions with Machine Learning | Protegendo transações financeiras com Machine Learning</i></p>
 </div>
 
 ---
 
-## 📋 Visão Geral do Projeto
+## 📋 Project Overview | Visão Geral do Projeto
 
-Este projeto implementa um **modelo de detecção de fraude** para transações de cartão de crédito, utilizando técnicas avançadas de aprendizado de máquina e um dataset real com mais de 280 mil transações.
+This project implements a **fraud detection model** for credit card transactions using advanced machine learning techniques and a real dataset with over 280 thousand records.
 
-### 🎯 Objetivos Principais
+Este projeto implementa um **modelo de detecção de fraude** para transações de cartão de crédito, utilizando técnicas avançadas de aprendizado de máquina e um dataset real com mais de 280 mil registros.
 
-- ✅ Analisar e pré-processar dataset de transações de cartão de crédito
-- ✅ Lidar com o severo desbalanceamento de classes (fraude vs legítima)
-- ✅ Treinar e avaliar modelos de classificação de alto desempenho
-- ✅ Implementar Git Large File Storage (Git LFS) para arquivos grandes
-- ✅ Publicar projeto profissional no GitHub
+### 🎯 Main Objectives | Objetivos Principais
+
+- ✅ Analyze and pre-process credit card transaction datasets | Analisar e pré-processar dataset de transações de cartão de crédito
+- ✅ Handle severe class imbalance (fraud vs legitimate) | Lidar com o severo desbalanceamento de classes (fraude vs legítima)
+- ✅ Train and evaluate high-performance classification models | Treinar e avaliar modelos de classificação de alto desempenho
+- ✅ Implement Git Large File Storage (Git LFS) for large files | Implementar Git Large File Storage (Git LFS) para arquivos grandes
+- ✅ Publish professional project on GitHub | Publicar projeto profissional no GitHub
 
 ---
 
 ## 📊 Dataset
 
+The dataset used is **`creditcard.csv`**, a real database from Kaggle (`mlg-ulb/creditcardfraud`).
+
 O dataset utilizado é o **`creditcard.csv`**, uma base de dados real proveniente do Kaggle (`mlg-ulb/creditcardfraud`).
 
-### 📁 Informações do Arquivo
+### 📁 File Information | Informações do Arquivo
 
-| Propriedade | Detalhes |
-|:---|:---|
-| **Localização** | [creditcard.csv](https://github.com/lincolnbuk/fraud-detection-credit-card/blob/main/creditcard.csv) |
-| **Tamanho** | ~150.8 MB |
-| **Armazenamento** | 🗄️ Git LFS (Large File Storage) |
-| **Formato** | CSV |
-| **Registros** | 284.807 transações |
-| **Colunas** | 31 (Time, V1-V28, Amount, Class) |
-| **Período** | Duas dias de transações reais |
+| Property | Details | Propriedade | Detalhes |
+|:---|:---|:---|:---|
+| **Location** | [creditcard.csv](https://github.com/lincolnbuk/fraud-detection-credit-card/blob/main/creditcard.csv) | **Localização** | [creditcard.csv](https://github.com/lincolnbuk/fraud-detection-credit-card/blob/main/creditcard.csv) |
+| **Size** | ~150.8 MB | **Tamanho** | ~150.8 MB |
+| **Storage** | 🗄️ Git LFS (Large File Storage) | **Armazenamento** | 🗄️ Git LFS (Large File Storage) |
+| **Format** | CSV | **Formato** | CSV |
+| **Records** | 284,807 transactions | **Registros** | 284.807 transações |
+| **Columns** | 31 (Time, V1-V28, Amount, Class) | **Colunas** | 31 (Time, V1-V28, Amount, Class) |
+| **Period** | Two days of real transactions | **Período** | Dois dias de transações reais |
 
-### 🔧 Como Acessar o Arquivo
+### 🔧 How to Access the File | Como Acessar o Arquivo
 
 ```bash
-# 1. Clone o repositório com Git LFS
+# 1. Clone the repository with Git LFS | Clone o repositório com Git LFS
 git clone https://github.com/lincolnbuk/fraud-detection-credit-card.git
 cd fraud-detection-credit-card
 
-# 2. Instale o Git LFS (se necessário)
+# 2. Install Git LFS if necessary | Instale o Git LFS (se necessário)
 git lfs install
 
-# 3. Baixe o arquivo grande
+# 3. Download the large file | Baixe o arquivo grande
 git lfs pull
 
-# 4. Acesse o arquivo localmente
-# O arquivo estará disponível em: ./creditcard.csv
+# 4. Access the file locally | Acesse o arquivo localmente
+# The file will be available at: ./creditcard.csv
 ```
 
+> ⚠️ **Note:** The file cannot be viewed in the GitHub web interface due to its size, but is fully accessible after cloning with Git LFS.
+> 
 > ⚠️ **Nota:** O arquivo não pode ser visualizado na interface web do GitHub devido ao seu tamanho, mas está completamente acessível após o clone com Git LFS.
 
 ---
 
-## 🔍 Análise Exploratória de Dados (EDA) e Pré-processamento
+## 🔍 Exploratory Data Analysis (EDA) and Pre-processing | Análise Exploratória de Dados (EDA) e Pré-processamento
 
-### 📈 Principais Observações
+### 📈 Key Observations | Principais Observações
 
-| Observação | Detalhes |
-|:---|:---|
-| **Valores Nulos** | ✅ Sem valores nulos em nenhuma coluna |
-| **Features PCA** | Colunas V1-V28 já escaladas e transformadas via PCA |
-| **Classe Desbalanceada** | 🔴 Vasta maioria não fraudulenta (Classe 0) vs. fraudes raras (Classe 1) |
-| **Target Distribution** | ~0.17% de transações fraudulentas |
+| Observation | Details | Observação | Detalhes |
+|:---|:---|:---|:---|
+| **Null Values** | ✅ No null values in any column | **Valores Nulos** | ✅ Sem valores nulos em nenhuma coluna |
+| **PCA Features** | Columns V1-V28 already scaled and transformed via PCA | **Features PCA** | Colunas V1-V28 já escaladas e transformadas via PCA |
+| **Imbalanced Class** | 🔴 Vast majority non-fraudulent (Class 0) vs. rare frauds (Class 1) | **Classe Desbalanceada** | 🔴 Vasta maioria não fraudulenta (Classe 0) vs. fraudes raras (Classe 1) |
+| **Target Distribution** | ~0.17% of fraudulent transactions | **Target Distribution** | ~0.17% de transações fraudulentas |
 
-### ⚙️ Etapas de Pré-processamento
+### ⚙️ Pre-processing Steps | Etapas de Pré-processamento
 
-1. **Escalamento de Features**
+1. **Feature Scaling | Escalamento de Features**
+   - `Time` and `Amount` scaled with `StandardScaler`
+   - Alignment with PCA features scale
    - `Time` e `Amount` escaladas com `StandardScaler`
    - Alignamento com escala das features PCA
 
-2. **Divisão de Dados**
+2. **Data Split | Divisão de Dados**
+   - Separation into features (X) and target (y)
+   - Train/test split with `stratify=y`
+   - Maintains original class proportion
    - Separação em features (X) e target (y)
    - Split treino/teste com `stratify=y`
    - Mantém proporção original de classes
 
-3. **Tratamento de Desbalanceamento**
+3. **Imbalance Handling | Tratamento de Desbalanceamento**
+   - 🔧 **SMOTE (Synthetic Minority Over-sampling Technique)**
+   - Applied **exclusively** to training set
+   - Avoids data leakage in test set
    - 🔧 **SMOTE (Synthetic Minority Over-sampling Technique)**
    - Aplicado **exclusivamente** ao conjunto de treino
    - Evita data leakage no conjunto de teste
 
 ---
 
-## 🤖 Modelagem e Avaliação
+## 🤖 Modeling and Evaluation | Modelagem e Avaliação
+
+Two classification models were explored and compared:
 
 Dois modelos de classificação foram explorados e comparados:
 
-### 1️⃣ Regressão Logística (Baseline)
+### 1️⃣ Logistic Regression (Baseline) | Regressão Logística (Baseline)
 
 ```
 ┌─────────────────────────────────────────┐
-│ REGRESSÃO LOGÍSTICA                     │
+│ LOGISTIC REGRESSION                     │
 ├─────────────────────────────────────────┤
 │ ROC AUC Score:  0.9659  ⭐⭐⭐⭐⭐      │
-│ Recall (Fraude): 0.88   (Sensibilidade) │
-│ Precision:       0.06   (Baixa)         │
-│ Status:          ⚠️ Muitos falsos +      │
+│ Recall (Fraud): 0.88   (Sensitivity)    │
+│ Precision:       0.06   (Low)           │
+│ Status:          ⚠️ Many false positives │
 └─────────────────────────────────────────┘
 ```
 
-**Análise:**
-- ✅ Identifica maioria das fraudes (recall alto)
-- ❌ Marca muitas transações legítimas como fraude (muitos falsos positivos)
-- 💭 Menos adequado para aplicação prática
+**Analysis | Análise:**
+- ✅ Identifies majority of frauds (high recall) | Identifica maioria das fraudes (recall alto)
+- ❌ Marks many legitimate transactions as fraud (many false positives) | Marca muitas transações legítimas como fraude (muitos falsos positivos)
+- 💭 Less suitable for practical application | Menos adequado para aplicação prática
 
 ---
 
@@ -122,83 +138,92 @@ Dois modelos de classificação foram explorados e comparados:
 │ RANDOM FOREST                           │
 ├─────────────────────────────────────────┤
 │ ROC AUC Score:  0.9489  ⭐⭐⭐⭐        │
-│ Recall (Fraude): 0.78   (Bom)           │
-│ Precision:       0.86   (Excelente!) ✨ │
-│ Status:          ✅ Modelo Recomendado  │
+│ Recall (Fraud): 0.78   (Good)           │
+│ Precision:       0.86   (Excellent!) ✨ │
+│ Status:          ✅ Recommended Model   │
 └─────────────────────────────────────────┘
 ```
 
-**Análise:**
-- ✅ Melhor equilíbrio Precision × Recall
-- ✅ Menos falsos positivos
-- ✅ Mais adequado para produção
-- 🏆 **Modelo selecionado para deploy**
+**Analysis | Análise:**
+- ✅ Better Precision × Recall balance | Melhor equilíbrio Precision × Recall
+- ✅ Fewer false positives | Menos falsos positivos
+- ✅ More suitable for production | Mais adequado para produção
+- 🏆 **Model selected for deployment | Modelo selecionado para deploy**
 
 ---
 
-### 📊 Análise de Importância das Features (Random Forest)
+### 📊 Feature Importance Analysis (Random Forest) | Análise de Importância das Features (Random Forest)
+
+The most relevant features for the model were analyzed to understand which variables contribute most significantly to predictions.
 
 As features mais relevantes para o modelo foram analisadas para entender quais variáveis contribuem mais significativamente nas previsões.
 
 ---
 
-## 🔐 Gerenciamento de Versões com Git e GitHub
+## 🔐 Version Management with Git and GitHub | Gerenciamento de Versões com Git e GitHub
+
+The project uses **Git** for version control and is hosted on **GitHub**.
 
 O projeto utiliza **Git** para controle de versão e é hospedado no **GitHub**.
 
-### 🗂️ Por que Git LFS?
+### 🗂️ Why Git LFS? | Por que Git LFS?
+
+The `creditcard.csv` file (150.8 MB) **exceeds GitHub's 100 MB limit** for individual files. We use **Git Large File Storage** to:
 
 O arquivo `creditcard.csv` (150.8 MB) **excede o limite de 100 MB** do GitHub para arquivos individuais. Utilizamos **Git Large File Storage** para:
-- ✅ Armazenar arquivos grandes eficientemente
-- ✅ Manter histórico de versões
-- ✅ Facilitar colaboração entre desenvolvedores
+
+- ✅ Store large files efficiently | Armazenar arquivos grandes eficientemente
+- ✅ Maintain version history | Manter histórico de versões
+- ✅ Facilitate collaboration between developers | Facilitar colaboração entre desenvolvedores
 
 ---
 
-## 🚀 Como Executar o Projeto
+## 🚀 How to Run the Project | Como Executar o Projeto
 
-### 📝 Pré-requisitos
+### 📝 Prerequisites | Pré-requisitos
 
 - Python 3.8+
-- Git com Git LFS
-- Jupyter Notebook ou Google Colab
+- Git with Git LFS
+- Jupyter Notebook or Google Colab
 
-### 📥 Instalação e Execução
+### 📥 Installation and Execution | Instalação e Execução
 
 ```bash
-# 1. Clone o repositório
+# 1. Clone the repository | Clone o repositório
 git clone https://github.com/lincolnbuk/fraud-detection-credit-card.git
 cd fraud-detection-credit-card
 
-# 2. Configure Git LFS
+# 2. Configure Git LFS | Configure Git LFS
 git lfs install
 git lfs pull
 
-# 3. Crie um ambiente virtual (opcional, mas recomendado)
+# 3. Create a virtual environment (optional, but recommended)
+# Crie um ambiente virtual (opcional, mas recomendado)
 python -m venv venv
 source venv/bin/activate  # No Windows: venv\Scripts\activate
 
-# 4. Instale as dependências
+# 4. Install dependencies | Instale as dependências
 pip install -r requirements.txt
 
-# Ou instale individualmente:
+# Or install individually | Ou instale individualmente:
 pip install pandas scikit-learn matplotlib seaborn imbalanced-learn jupyter
 
-# 5. Execute o Jupyter Notebook
+# 5. Run Jupyter Notebook | Execute o Jupyter Notebook
 jupyter notebook
 
-# 6. Abra o notebook principal e execute as células
+# 6. Open the main notebook and run the cells
+# Abra o notebook principal e execute as células
 ```
 
-### ☁️ Alternativa: Google Colab
+### ☁️ Alternative: Google Colab | Alternativa: Google Colab
 
-1. Acesse [Google Colab](https://colab.research.google.com)
-2. Abra o notebook do repositório
-3. Execute as células sequencialmente
+1. Access [Google Colab](https://colab.research.google.com)
+2. Open the notebook from the repository
+3. Run the cells sequentially
 
 ---
 
-## 📦 Dependências
+## 📦 Dependencies | Dependências
 
 ```
 pandas==1.5.0
@@ -211,46 +236,51 @@ jupyter==1.0.0
 
 ---
 
-## 📁 Estrutura do Repositório
+## 📁 Repository Structure | Estrutura do Repositório
 
 ```
 fraud-detection-credit-card/
-├── 📓 notebook.ipynb           # Notebook principal com análise completa
-├── 📄 README.md                # Este arquivo
+├── 📓 notebook.ipynb           # Main notebook with complete analysis
+├── 📄 README.md                # This file
 ├── 📊 creditcard.csv           # Dataset (Git LFS)
-├── 📋 requirements.txt         # Dependências do projeto
-└── 🔧 .gitattributes          # Configuração do Git LFS
+├── 📋 requirements.txt         # Project dependencies
+└── 🔧 .gitattributes          # Git LFS configuration
 ```
 
 ---
 
-## 🎓 Aprendizados Principais
+## 🎓 Key Learnings | Aprendizados Principais
 
-- ✅ Tratamento de dados desbalanceados com SMOTE
-- ✅ Comparação entre modelos (Regressão Logística vs Random Forest)
-- ✅ Avaliação usando métricas apropriadas (Recall, Precision, ROC AUC)
-- ✅ Implementação de Git LFS para arquivos grandes
-- ✅ Boas práticas de versionamento e documentação
+- ✅ Handling imbalanced data with SMOTE | Tratamento de dados desbalanceados com SMOTE
+- ✅ Comparison between models (Logistic Regression vs Random Forest) | Comparação entre modelos (Regressão Logística vs Random Forest)
+- ✅ Evaluation using appropriate metrics (Recall, Precision, ROC AUC) | Avaliação usando métricas apropriadas (Recall, Precision, ROC AUC)
+- ✅ Git LFS implementation for large files | Implementação de Git LFS para arquivos grandes
+- ✅ Version control best practices and documentation | Boas práticas de versionamento e documentação
 
 ---
 
-## 📞 Contato & Contribuições
+## 📞 Contact & Contributions | Contato & Contribuições
 
-**Autor:** [lincolnbuk](https://github.com/lincolnbuk)
+**Author:** [lincolnbuk](https://github.com/lincolnbuk)
+
+If you find issues or have improvement suggestions, feel free to:
 
 Se você encontrar problemas ou tiver sugestões de melhorias, sinta-se livre para:
-- 🐛 Abrir uma [issue](https://github.com/lincolnbuk/fraud-detection-credit-card/issues)
-- 🔄 Enviar um [pull request](https://github.com/lincolnbuk/fraud-detection-credit-card/pulls)
+
+- 🐛 Open an [issue](https://github.com/lincolnbuk/fraud-detection-credit-card/issues) | Abrir uma [issue](https://github.com/lincolnbuk/fraud-detection-credit-card/issues)
+- 🔄 Submit a [pull request](https://github.com/lincolnbuk/fraud-detection-credit-card/pulls) | Enviar um [pull request](https://github.com/lincolnbuk/fraud-detection-credit-card/pulls)
 
 ---
 
-## 📜 Licença
+## 📜 License | Licença
+
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 Este projeto está licenciado sob a MIT License - veja o arquivo LICENSE para detalhes.
 
 ---
 
 <div align="center">
-  <p><strong>⭐ Se este projeto foi útil, considere deixar uma estrela! ⭐</strong></p>
+  <p><strong>⭐ If this project was useful, consider leaving a star! | Se este projeto foi útil, considere deixar uma estrela! ⭐</strong></p>
   <p>Made with ❤️ by <a href="https://github.com/lincolnbuk">lincolnbuk</a></p>
 </div>
