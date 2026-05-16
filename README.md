@@ -5,7 +5,7 @@
 ![Python](https://img.shields.io/badge/Python-3.8%2B-yellow?style=for-the-badge)
 
 <div align="center">
-  <img src="https://images.unsplash.com/photo-1552882917-5ff12fcca010?w=800&q=80" alt="Credit Card Security" width="100%" style="border-radius: 10px; margin: 20px 0;">
+  <img src="https://images.unsplash.com/photo-1552882917-5ff12fcca010?w=800&h=400&fit=crop" alt="Credit Card Security" width="100%" style="border-radius: 10px; margin: 20px 0; max-height: 400px;">
   <p><i>Protecting financial transactions with Machine Learning | Protegendo transações financeiras com Machine Learning</i></p>
 </div>
 
