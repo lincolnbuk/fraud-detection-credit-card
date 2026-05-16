@@ -5,7 +5,7 @@
 ![Python](https://img.shields.io/badge/Python-3.8%2B-yellow?style=for-the-badge)
 
 <div align="center">
-  <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80" alt="Machine Learning Data Science" width="100%" style="border-radius: 10px; margin: 20px 0;">
+  <img src="https://images.unsplash.com/photo-1677442d019cecf8916f098b87fb6f20fccc1d96de4b53b3b8fdab4fe1dce34?w=800&q=80" alt="Robot Programming AI" width="100%" style="border-radius: 10px; margin: 20px 0;">
   <p><i>Protecting financial transactions with Machine Learning | Protegendo transações financeiras com Machine Learning</i></p>
 </div>
 
@@ -15,7 +15,7 @@
 
 This project implements a **fraud detection model** for credit card transactions using advanced machine learning techniques and a real dataset with over 280 thousand records.
 
-Este projeto implementa um **modelo de detecção de fraude** para transações de cartão de crédito, utilizando técnicas avançadas de aprendizado de máquina e um dataset real com mais de 280 mil registros.
+Este projeto implementa um **modelo de detecção de fraude** para transações de cartão de crédito, utilizando técnicas avançadas de aprendizado de máquina e um dataset real com mais de 280 mil transações.
 
 ### 🎯 Main Objectives | Objetivos Principais
 
