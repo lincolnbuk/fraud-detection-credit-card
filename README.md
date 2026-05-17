@@ -5,7 +5,7 @@
 ![Python](https://img.shields.io/badge/Python-3.8%2B-yellow?style=for-the-badge)
 
 <div align="center">
-  <img src="https://images.pexels.com/photos/18187343/pexels-photo-18187343.jpeg?w=800&h=400&fit=crop" alt="AI Robot Writing Code" width="100%" style="border-radius: 10px; margin: 20px 0; max-height: 400px;">
+  <img src="https://images.unsplash.com/photo-1639762681033-6461efb0efa8?w=800&h=400&fit=crop" alt="AI and Machine Learning - Fraud Detection" width="100%" style="border-radius: 10px; margin: 20px 0; max-height: 400px; object-fit: cover;">
   <p><i>Intelligent Machine Learning Detection System | Sistema Inteligente de Detecção com Machine Learning</i></p>
 </div>
 
